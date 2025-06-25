@@ -1,10 +1,10 @@
 import Teste from './Teste'
-import EstiloGlobalx from './styles'
+import EstiloGlobal from './styles'
 
 function App() {
   return (
     <>
-      <EstiloGlobalx />
+      <EstiloGlobal />
       <Teste />
     </>
   )
