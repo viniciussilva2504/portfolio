@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components'
-
 import { theme } from './themes/dark'
 
 const EstiloGlobal = createGlobalStyle`
@@ -8,6 +7,9 @@ const EstiloGlobal = createGlobalStyle`
   padding: 0;
   font-family: 'Inter', sans-serif;
   list-style: none;
+  @media (max-width: 768px) {
+      padding-top: 16px;
+    }
   }
 
 body {
