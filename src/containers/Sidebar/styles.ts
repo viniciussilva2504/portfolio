@@ -19,4 +19,8 @@ export const SidebarContainer = styled.div`
   position: sticky;
   top: 80px;
   left: 0;
+
+  @media (max-width: 768px) {
+    margn-bottom: 40px;
+    text-align: center;
 `
