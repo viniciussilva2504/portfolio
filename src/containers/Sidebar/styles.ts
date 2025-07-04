@@ -16,7 +16,6 @@ export const BotaoTema = styled.button`
 `
 
 export const SidebarContainer = styled.div`
-  position: sticky;
   top: 80px;
   left: 0;
 
