@@ -1,6 +1,6 @@
 import { JSX } from 'react/jsx-runtime'
 import styled from 'styled-components'
-import { Props } from '.'
+import { Props } from './index'
 
 import React from 'react'
 

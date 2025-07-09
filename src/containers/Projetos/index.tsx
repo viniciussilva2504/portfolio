@@ -1,4 +1,8 @@
-import Projeto from '../../components/Projeto'
+import {
+  CalculadoraAritmetica,
+  CalculadoraImcReact,
+  ProjetoDisneyPlus
+} from '../../components/Projeto'
 import Title from '../../components/title'
 
 import { Lista } from './styles'
@@ -9,40 +13,13 @@ const projetos = () => (
     <br />
     <Lista>
       <li>
-        <Projeto />
+        <ProjetoDisneyPlus />
       </li>
       <li>
-        <Projeto />
+        <CalculadoraAritmetica />
       </li>
       <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
-      </li>
-      <li>
-        <Projeto />
+        <CalculadoraImcReact />
       </li>
     </Lista>
   </section>
