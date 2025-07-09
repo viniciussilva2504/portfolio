@@ -1,6 +1,8 @@
 import {
   CalculadoraAritmetica,
   CalculadoraImcReact,
+  EbacTechTalks,
+  MktGaleria,
   ProjetoDisneyPlus
 } from '../../components/Projeto'
 import Title from '../../components/title'
@@ -20,6 +22,12 @@ const projetos = () => (
       </li>
       <li>
         <CalculadoraImcReact />
+      </li>
+      <li>
+        <EbacTechTalks />
+      </li>
+      <li>
+        <MktGaleria />
       </li>
     </Lista>
   </section>

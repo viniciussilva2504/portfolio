@@ -53,3 +53,37 @@ export const CalculadoraImcReact = () => {
     </Card>
   )
 }
+export const EbacTechTalks = () => {
+  return (
+    <Card>
+      <Title>Evento Fictício</Title>
+      <Paragrafo tipo="secundario">
+        EBAC Tech Talks - Divulgação de evento fictício
+      </Paragrafo>
+      <LinkBotao
+        href="https://ebac-tech-talks-azure-seven.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}
+export const MktGaleria = () => {
+  return (
+    <Card>
+      <Title>Galeria de Arte - Proj. HTML</Title>
+      <Paragrafo tipo="secundario">
+        Projeto HTML/CSS de uma galeria de arte fictícia
+      </Paragrafo>
+      <LinkBotao
+        href="https://email-mkt-galeria.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}

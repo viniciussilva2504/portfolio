@@ -17,9 +17,9 @@ const Sidebar = (props: Props) => (
         Vinicius J. Silva
       </Paragrafo>
       <Descricao tipo="principal" fontSize={12}>
-        Dev. front-end | cursando
+        Dev. front-end Jr
       </Descricao>
-      <BotaoTema onClick={props.trocarTema}>Trocar tema</BotaoTema>
+      <BotaoTema onClick={props.trocarTema}>Backgrond</BotaoTema>
     </SidebarContainer>
   </aside>
 )
