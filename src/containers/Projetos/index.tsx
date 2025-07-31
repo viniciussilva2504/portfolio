@@ -1,7 +1,9 @@
 import {
   CalculadoraAritmetica,
   CalculadoraImcReact,
+  CalculadoraMediasEscolares,
   EbacTechTalks,
+  LandingPageStarTrek,
   MktGaleria,
   ProjetoDisneyPlus
 } from '../../components/Projeto'
@@ -28,6 +30,12 @@ const projetos = () => (
       </li>
       <li>
         <MktGaleria />
+      </li>
+      <li>
+        <LandingPageStarTrek />
+      </li>
+      <li>
+        <CalculadoraMediasEscolares />
       </li>
     </Lista>
   </section>

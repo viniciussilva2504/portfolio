@@ -53,6 +53,23 @@ export const CalculadoraImcReact = () => {
     </Card>
   )
 }
+export const CalculadoraMediasEscolares = () => {
+  return (
+    <Card>
+      <Title>Calculadora de Médias Escolares</Title>
+      <Paragrafo tipo="secundario">
+        Calculadora de médias escolares desenvolvida com React
+      </Paragrafo>
+      <LinkBotao
+        href="https://calculadora-medias-proj.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}
 export const EbacTechTalks = () => {
   return (
     <Card>
@@ -79,6 +96,23 @@ export const MktGaleria = () => {
       </Paragrafo>
       <LinkBotao
         href="https://email-mkt-galeria.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}
+export const LandingPageStarTrek = () => {
+  return (
+    <Card>
+      <Title>Landing Page Star Trek</Title>
+      <Paragrafo tipo="secundario">
+        Landing Page da série Star Trek - Jornada nas Estrelas
+      </Paragrafo>
+      <LinkBotao
+        href="https://landing-star-trek.vercel.app//"
         target="_blank"
         rel="noopener noreferrer"
       >

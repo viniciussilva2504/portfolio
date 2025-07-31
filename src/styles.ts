@@ -1,27 +1,25 @@
 import styled, { createGlobalStyle } from 'styled-components'
+
 import { theme } from './themes/dark'
 
 const EstiloGlobal = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  list-style: none;
-  @media (max-width: 768px) {
-      padding-top: 16px;
-    }
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      list-style: none;
   }
 
-body {
+  body {
     padding-top: 80px;
     padding-bottom: 80px;
     background-color: ${(props) => (props.theme as theme).corFundo};
 
     @media (max-width: 768px) {
-      padding-top: 16px;
+    padding-top: 16px;
     }
   }
-`
+  `
 
 export default EstiloGlobal
 
@@ -31,9 +29,10 @@ export const Container = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 128px auto;
-  column-gap: 56px; // Espaçamento entre colunas
+  column-gap: 56px;
 
-  img {
-    max-width: 100%;
+  @media (max-width: 768px) {
+    max-width: 80%;
+    display: block;
   }
 `
