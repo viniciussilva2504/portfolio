@@ -13,6 +13,23 @@ export const ProjetoDisneyPlus = () => {
         href="https://clone-disneyplus-mu-two.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
+        >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}
+export const EbacTechTalks = () => {
+  return (
+    <Card>
+      <Title>Evento Fictício</Title>
+      <Paragrafo tipo="secundario">
+        EBAC Tech Talks - Divulgação de evento fictício
+      </Paragrafo>
+      <LinkBotao
+        href="https://ebac-tech-talks-azure-seven.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Visualizar
       </LinkBotao>
@@ -62,23 +79,6 @@ export const CalculadoraMediasEscolares = () => {
       </Paragrafo>
       <LinkBotao
         href="https://calculadora-medias-proj.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visualizar
-      </LinkBotao>
-    </Card>
-  )
-}
-export const EbacTechTalks = () => {
-  return (
-    <Card>
-      <Title>Evento Fictício</Title>
-      <Paragrafo tipo="secundario">
-        EBAC Tech Talks - Divulgação de evento fictício
-      </Paragrafo>
-      <LinkBotao
-        href="https://ebac-tech-talks-azure-seven.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
