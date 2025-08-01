@@ -1,4 +1,3 @@
-import exp from 'constants'
 import Paragrafo from '../../components/Paragrafo'
 import Title from '../../components/title'
 import { GithubSecao } from './styles'
@@ -16,8 +15,14 @@ const Sobre = () => (
       management, component-based architecture and performance optimization.
     </Paragrafo>
     <GithubSecao>
-      <img src="https://github-readme-stats.vercel.app/api?username=viniciussilva2504&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" />
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=viniciussilva2504&layout=compact&langs_count=7&theme=dracula" />
+      <img 
+        src="https://github-readme-stats.vercel.app/api?username=viniciussilva2504&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" 
+        alt="GitHub Stats do Vinicius Silva" 
+      />
+      <img 
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=viniciussilva2504&layout=compact&langs_count=7&theme=dracula" 
+        alt="Linguagens mais utilizadas do Vinicius Silva" 
+      />
     </GithubSecao>
   </section>
 )

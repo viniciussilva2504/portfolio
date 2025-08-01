@@ -1,4 +1,4 @@
-import 'styled-components'
+import styled from 'styled-components'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -8,8 +8,6 @@ declare module 'styled-components' {
     corDeFundoBotao: string
   }
 }
-
-import styled from 'styled-components'
 
 export const Card = styled.div`
   border: 1px solid ${(props) => props.theme.corDaBorda};

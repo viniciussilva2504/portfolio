@@ -1,8 +1,5 @@
-import { JSX } from 'react/jsx-runtime'
 import styled from 'styled-components'
 import { Props } from '.'
-
-import React from 'react'
 
 export const Title = styled.h3<Props>`
   color: ${(props) => props.theme.corPrincipal};
