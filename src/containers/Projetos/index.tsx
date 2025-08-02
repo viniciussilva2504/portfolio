@@ -1,8 +1,8 @@
 import {
   CalculadoraAritmetica,
+  EbacTechTalks,
   CalculadoraImcReact,
   CalculadoraMediasEscolares,
-  EbacTechTalks,
   LandingPageStarTrek,
   MktGaleria,
   ProjetoDisneyPlus
@@ -13,20 +13,20 @@ import { Lista } from './styles'
 
 const projetos = () => (
   <section>
-    <Title fontSize={16}>Projetos</Title>
+    <Title fontSize={16}>Projects</Title>
     <br />
     <Lista>
       <li>
         <ProjetoDisneyPlus />
       </li>
       <li>
+        <EbacTechTalks />
+      </li>
+      <li>
         <CalculadoraAritmetica />
       </li>
       <li>
         <CalculadoraImcReact />
-      </li>
-      <li>
-        <EbacTechTalks />
       </li>
       <li>
         <MktGaleria />

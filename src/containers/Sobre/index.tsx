@@ -4,7 +4,7 @@ import { GithubSecao } from './styles'
 
 const Sobre = () => (
   <section>
-    <Title fontSize={16}>Sobre mim</Title>
+    <Title fontSize={16}>About me</Title>
     <br />
     <Paragrafo tipo="principal">
       Jr Front-end Dev. Hands-on experience with core front-end technologies
@@ -15,13 +15,13 @@ const Sobre = () => (
       management, component-based architecture and performance optimization.
     </Paragrafo>
     <GithubSecao>
-      <img 
-        src="https://github-readme-stats.vercel.app/api?username=viniciussilva2504&show_icons=true&theme=dracula&include_all_commits=true&count_private=true" 
-        alt="GitHub Stats do Vinicius Silva" 
+      <img
+        src="https://github-readme-stats.vercel.app/api?username=viniciussilva2504&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"
+        alt="GitHub Stats do Vinicius Silva"
       />
-      <img 
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=viniciussilva2504&layout=compact&langs_count=7&theme=dracula" 
-        alt="Linguagens mais utilizadas do Vinicius Silva" 
+      <img
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=viniciussilva2504&layout=compact&langs_count=7&theme=dracula"
+        alt="Linguagens mais utilizadas do Vinicius Silva"
       />
     </GithubSecao>
   </section>
