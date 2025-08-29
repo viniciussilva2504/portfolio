@@ -5,9 +5,11 @@ import {
   CalculadoraMediasEscolares,
   LandingPageStarTrek,
   MktGaleria,
-  ProjetoDisneyPlus
+  ProjetoDisneyPlus,
+  ListaDeTarefas,
+  ListaDeContatos
 } from '../../components/Projeto'
-import Title from '../../components/title'
+  import Title from '../../components/title'
 
 import { Lista } from './styles'
 
@@ -21,6 +23,12 @@ const projetos = () => (
       </li>
       <li>
         <EbacTechTalks />
+      </li>
+      <li>
+        <ListaDeTarefas />
+      </li>
+      <li>
+        <ListaDeContatos />
       </li>
       <li>
         <CalculadoraAritmetica />

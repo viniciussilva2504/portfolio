@@ -12,6 +12,7 @@ declare module 'styled-components' {
 export const Card = styled.div`
   border: 1px solid ${(props) => props.theme.corDaBorda};
   padding: 12px;
+  text-align: center;
 `
 
 export const LinkBotao = styled.a`
