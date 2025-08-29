@@ -1,13 +1,13 @@
 import {
   CalculadoraAritmetica,
   EbacTechTalks,
+  ListaDeTarefas,
+  ListaDeContatos
   CalculadoraImcReact,
   CalculadoraMediasEscolares,
   LandingPageStarTrek,
   MktGaleria,
   ProjetoDisneyPlus,
-  ListaDeTarefas,
-  ListaDeContatos
 } from '../../components/Projeto'
   import Title from '../../components/title'
 
