@@ -155,3 +155,19 @@ export const LandingPageStarTrek = () => {
     </Card>
   )
 }
+
+const Projetos = () => (
+  <>
+    <ProjetoDisneyPlus />
+    <EbacTechTalks />
+    <ListaDeTarefas />
+    <ListaDeContatos />
+    <CalculadoraAritmetica />
+    <CalculadoraImcReact />
+    <CalculadoraMediasEscolares />
+    <MktGaleria />
+    <LandingPageStarTrek />
+  </>
+)
+
+export default Projetos
