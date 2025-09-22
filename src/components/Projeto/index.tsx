@@ -109,7 +109,7 @@ export const CalculadoraMediasEscolares = () => {
     <Card>
       <Title>Calculadora de Médias Escolares</Title>
       <Paragrafo tipo="secundario">
-        Calculadora de médias escolares desenvolvida com React
+        Calculadora de médias escolares em React
       </Paragrafo>
       <LinkBotao
         href="https://calculadora-medias-proj.vercel.app/"
