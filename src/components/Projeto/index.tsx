@@ -138,23 +138,6 @@ export const MktGaleria = () => {
     </Card>
   )
 }
-export const LandingPageStarTrek = () => {
-  return (
-    <Card>
-      <Title>Landing Page Star Trek</Title>
-      <Paragrafo tipo="secundario">
-        Landing Page da série Star Trek - Jornada nas Estrelas
-      </Paragrafo>
-      <LinkBotao
-        href="https://landing-star-trek.vercel.app//"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visualizar
-      </LinkBotao>
-    </Card>
-  )
-}
 
 const Projetos = () => (
   <>
@@ -166,7 +149,6 @@ const Projetos = () => (
     <CalculadoraImcReact />
     <CalculadoraMediasEscolares />
     <MktGaleria />
-    <LandingPageStarTrek />
   </>
 )
 

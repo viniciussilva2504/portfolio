@@ -1,19 +1,18 @@
 import {
-  CalculadoraAritmetica,
+  ProjetoDisneyPlus,
   EbacTechTalks,
   ListaDeTarefas,
-  ListaDeContatos
+  ListaDeContatos,
+  CalculadoraAritmetica,
   CalculadoraImcReact,
   CalculadoraMediasEscolares,
-  LandingPageStarTrek,
   MktGaleria,
-  ProjetoDisneyPlus,
 } from '../../components/Projeto'
   import Title from '../../components/title'
 
 import { Lista } from './styles'
 
-const projetos = () => (
+const Projetos = () => (
   <section>
     <Title fontSize={16}>Projects</Title>
     <br />
@@ -40,13 +39,10 @@ const projetos = () => (
         <MktGaleria />
       </li>
       <li>
-        <LandingPageStarTrek />
-      </li>
-      <li>
         <CalculadoraMediasEscolares />
       </li>
     </Lista>
   </section>
 )
 
-export default projetos
+export default Projetos
