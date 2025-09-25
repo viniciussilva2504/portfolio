@@ -1,6 +1,7 @@
 import {
   ProjetoDisneyPlus,
   EbacTechTalks,
+  Efood,
   ListaDeTarefas,
   ListaDeContatos,
   CalculadoraAritmetica,
@@ -22,6 +23,9 @@ const Projetos = () => (
       </li>
       <li>
         <EbacTechTalks />
+      </li>
+      <li>
+        <Efood />
       </li>
       <li>
         <ListaDeTarefas />
