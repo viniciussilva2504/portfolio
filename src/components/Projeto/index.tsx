@@ -155,7 +155,25 @@ export const MktGaleria = () => {
     </Card>
   )
 }
+export const TesteCypress = () => {
+  return (
+    <Card>
+      <Title>Teste Automatizado com Cypress</Title>
+      <Paragrafo tipo="secundario">
+        Teste automatizado de uma aplicação web usando Cypress
+      </Paragrafo>
+      <LinkBotao
+        href="https://github.com/viniciussilva2504/exercicio-cypress.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}
 
+// Componente que renderiza todos os projetos
 const Projetos = () => (
   <>
     <ProjetoDisneyPlus />
@@ -167,6 +185,7 @@ const Projetos = () => (
     <CalculadoraImcReact />
     <CalculadoraMediasEscolares />
     <MktGaleria />
+    <TesteCypress />
   </>
 )
 
