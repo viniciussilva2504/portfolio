@@ -8,8 +8,9 @@ import {
   CalculadoraImcReact,
   CalculadoraMediasEscolares,
   MktGaleria,
+  TesteCypress
 } from '../../components/Projeto'
-  import Title from '../../components/title'
+import Title from '../../components/title'
 
 import { Lista } from './styles'
 
@@ -44,6 +45,9 @@ const Projetos = () => (
       </li>
       <li>
         <CalculadoraMediasEscolares />
+      </li>
+      <li>
+        <TesteCypress />
       </li>
     </Lista>
   </section>
