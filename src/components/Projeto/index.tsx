@@ -172,21 +172,3 @@ export const TesteCypress = () => {
     </Card>
   )
 }
-
-// Componente que renderiza todos os projetos
-const Projetos = () => (
-  <>
-    <ProjetoDisneyPlus />
-    <EbacTechTalks />
-    <Efood />
-    <ListaDeTarefas />
-    <ListaDeContatos />
-    <CalculadoraAritmetica />
-    <CalculadoraImcReact />
-    <CalculadoraMediasEscolares />
-    <MktGaleria />
-    <TesteCypress />
-  </>
-)
-
-export default Projetos
