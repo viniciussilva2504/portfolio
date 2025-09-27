@@ -160,7 +160,7 @@ export const TesteCypress = () => {
     <Card>
       <Title>Teste Automatizado com Cypress</Title>
       <Paragrafo tipo="secundario">
-        Teste automatizado de uma aplicação web usando Cypress
+        Teste automatizado de API web em Cypress
       </Paragrafo>
       <LinkBotao
         href="https://github.com/viniciussilva2504/exercicio-cypress.git"
