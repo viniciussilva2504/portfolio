@@ -58,7 +58,7 @@ export const ListaDeTarefas = () => {
     <Card>
       <Title>Lista de Tarefas</Title>
       <Paragrafo tipo="secundario">
-        Aplicação de gerenciamento de tarefas desenvolvida com React
+        Gerenciador de tarefas desenvolvido com React
       </Paragrafo>
       <LinkBotao
         href="https://minhas-tarefas-git-main-vinicius-silvas-projects-6f23ba6d.vercel.app/"
@@ -75,7 +75,7 @@ export const ListaDeContatos = () => {
     <Card>
       <Title>Lista de Contatos</Title>
       <Paragrafo tipo="secundario">
-        Aplicação de gerenciamento de contatos desenvolvida com React
+        Gerenciador de contatos desenvolvido com React
       </Paragrafo>
       <LinkBotao
         href="https://lista-de-contatos-react-iota-navy.vercel.app/"
