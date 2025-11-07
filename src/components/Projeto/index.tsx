@@ -61,7 +61,7 @@ export const ListaDeTarefas = () => {
         Gerenciador de tarefas desenvolvido com React
       </Paragrafo>
       <LinkBotao
-        href="https://minhas-tarefas-oy77oh6ss-vinicius-silvas-projects-6f23ba6d.vercel.app"
+        href="https://portfolio-i81ymjmpl-vinicius-silvas-projects-6f23ba6d.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
