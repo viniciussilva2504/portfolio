@@ -1,6 +1,6 @@
 import Paragrafo from '../../components/Paragrafo'
 import Title from '../../components/title'
-import { GithubSecao, GithubCard } from './styles'
+import { GithubSecao } from './styles'
 
 const Sobre = () => (
   <section>
@@ -15,20 +15,14 @@ const Sobre = () => (
       management, component-based architecture and performance optimization.
     </Paragrafo>
     <GithubSecao>
-      <GithubCard href="https://github.com/viniciussilva2504" target="_blank" rel="noopener noreferrer">
-        <h3>📊 GitHub Stats</h3>
-        <p>🔥 Total de Commits: <span className="highlight">800+</span></p>
-        <p>⭐ Total de Stars: <span className="highlight">15+</span></p>
-        <p>📂 Repositórios Públicos: <span className="highlight">25+</span></p>
-        <p>👥 Seguidores: <span className="highlight">10+</span></p>
-      </GithubCard>
-      <GithubCard href="https://github.com/viniciussilva2504" target="_blank" rel="noopener noreferrer">
-        <h3>💻 Linguagens Mais Usadas</h3>
-        <p>🟨 JavaScript / TypeScript</p>
-        <p>🔵 CSS / SCSS</p>
-        <p>🟠 HTML</p>
-        <p>🟢 Vue.js / React</p>
-      </GithubCard>
+      <img
+        src="https://github-readme-stats-sigma-five.vercel.app/api?username=viniciussilva2504&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"
+        alt="GitHub Stats do Vinicius Silva"
+      />
+      <img
+        src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=viniciussilva2504&layout=compact&langs_count=7&theme=dracula"
+        alt="Linguagens mais utilizadas do Vinicius Silva"
+      />
     </GithubSecao>
   </section>
 )
