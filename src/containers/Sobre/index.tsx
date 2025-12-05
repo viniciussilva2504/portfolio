@@ -15,14 +15,20 @@ const Sobre = () => (
       management, component-based architecture and performance optimization.
     </Paragrafo>
     <GithubSecao>
-      <img
-        src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=viniciussilva2504&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"
-        alt="GitHub Stats do Vinicius Silva"
-      />
-      <img
-        src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=viniciussilva2504&layout=compact&langs_count=7&theme=dracula"
-        alt="Linguagens mais utilizadas do Vinicius Silva"
-      />
+      <a href="https://github.com/viniciussilva2504" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=viniciussilva2504&show_icons=true&theme=dracula&include_all_commits=true&count_private=true&cache_seconds=86400"
+          alt="GitHub Stats do Vinicius Silva"
+          loading="lazy"
+        />
+      </a>
+      <a href="https://github.com/viniciussilva2504" target="_blank" rel="noopener noreferrer">
+        <img
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=viniciussilva2504&layout=compact&langs_count=7&theme=dracula&cache_seconds=86400"
+          alt="Linguagens mais utilizadas do Vinicius Silva"
+          loading="lazy"
+        />
+      </a>
     </GithubSecao>
   </section>
 )
