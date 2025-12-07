@@ -172,3 +172,20 @@ export const TesteCypress = () => {
     </Card>
   )
 }
+export const ProdDadosPython = () => {
+  return (
+    <Card>
+      <Title>Dados com Python</Title>
+      <Paragrafo tipo="secundario">
+        Produção de dados gráficos e análises utilizando Python
+      </Paragrafo>
+      <LinkBotao
+        href="https://github.com/viniciussilva2504/extracao.py.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}
