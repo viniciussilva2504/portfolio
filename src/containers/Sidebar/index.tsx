@@ -2,7 +2,7 @@ import Avatar from '../../components/Avatar'
 import Paragrafo from '../../components/Paragrafo'
 import Title from '../../components/title'
 
-import { Descricao, BotaoTema, BotaoCurriculo, SidebarContainer } from './styles'
+import { Descricao, BotaoTema, SidebarContainer } from './styles'
 
 type Props = {
   trocarTema?: () => void
@@ -20,9 +20,6 @@ const Sidebar = (props: Props) => (
         Dev. front-end Jr
       </Descricao>
       <BotaoTema onClick={props.trocarTema}>Backgrond</BotaoTema>
-      <BotaoCurriculo href="/curriculo-vinicius-silva.pdf" download="Curriculo-Vinicius-Silva.pdf">
-        Currículo
-      </BotaoCurriculo>
     </SidebarContainer>
   </aside>
 )
