@@ -19,21 +19,13 @@ export const BotaoCurriculo = styled.a`
   border-radius: 12px;
   padding: 8px;
   margin-top: 8px;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
+  display: inline-block;
   color: ${(props) => props.theme.corFundo};
   font-size: 10px;
   font-weight: bold;
   background-color: ${(props) => props.theme.corPrincipal};
   cursor: pointer;
   text-decoration: none;
-  text-align: center;
-  transition: opacity 0.3s;
-
-  &:hover {
-    opacity: 0.8;
-  }
 `
 
 export const SidebarContainer = styled.div`
