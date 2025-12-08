@@ -15,6 +15,24 @@ export const BotaoTema = styled.button`
   cursor: pointer;
 `
 
+export const BotaoCurriculo = styled.a`
+  border-radius: 12px;
+  padding: 8px;
+  margin-top: 8px;
+  display: inline-block;
+  color: ${(props) => props.theme.corFundo};
+  font-size: 10px;
+  font-weight: bold;
+  background-color: ${(props) => props.theme.corPrincipal};
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`
+
 export const SidebarContainer = styled.div`
   position: sticky;
   top: 80px;
