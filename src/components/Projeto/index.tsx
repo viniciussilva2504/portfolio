@@ -36,7 +36,23 @@ export const EbacTechTalks = () => {
     </Card>
   )
 }
-// export const Efood removido
+export const Efood = () => {
+  return (
+    <Card>
+      <Title>Projeto eFood API</Title>
+      <Paragrafo tipo="secundario">
+        API RESTful para um aplicativo de delivery de comida
+      </Paragrafo>
+      <LinkBotao
+        href="https://efood-api-mu.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visualizar
+      </LinkBotao>
+    </Card>
+  )
+}
 export const ListaDeTarefas = () => {
   return (
     <Card>
