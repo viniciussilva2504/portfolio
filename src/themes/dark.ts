@@ -1,17 +1,16 @@
 const themaDark = {
-  corPrincipal: '#fff',
-  corSecundaria: '#eee',
-  corFundo: '#282a35',
-  corDeFundoBotao: '#fff',
-  corDaBorda: '#c1c1c1'
+  corPrincipal: '#e2e8f0',
+  corSecundaria: '#64748b',
+  corFundo: '#0a0c10',
+  corDeFundoBotao: '#00e5ff',
+  corDaBorda: '#2a3344',
+  corSuperficie: '#111318',
+  corSuperficie2: '#181c24',
+  corAcento: '#00e5ff',
+  corAcento2: '#7c3aed',
+  corVerde: '#10b981',
+  fontMono: "'Space Mono', monospace",
+  fontSans: "'Sora', 'Inter', sans-serif",
 }
 
 export default themaDark
-
-export type theme = {
-  corPrincipal: string
-  corSecundaria: string
-  corFundo: string
-  corDeFundoBotao: string
-  corDaBorda: string
-}

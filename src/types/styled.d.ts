@@ -7,5 +7,12 @@ declare module 'styled-components' {
     corFundo: string
     corDeFundoBotao: string
     corDaBorda: string
+    corSuperficie: string
+    corSuperficie2: string
+    corAcento: string
+    corAcento2: string
+    corVerde: string
+    fontMono: string
+    fontSans: string
   }
 }

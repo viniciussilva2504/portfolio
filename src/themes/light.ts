@@ -1,9 +1,16 @@
 const themaLight = {
-  corPrincipal: '#282a35',
-  corSecundaria: '#949494',
-  corFundo: '#fff',
+  corPrincipal: '#0f172a',
+  corSecundaria: '#475569',
+  corFundo: '#f8fafc',
   corDeFundoBotao: '#4476bf',
-  corDaBorda: '#c1c1c1'
+  corDaBorda: '#e2e8f0',
+  corSuperficie: '#ffffff',
+  corSuperficie2: '#f1f5f9',
+  corAcento: '#0284c7',
+  corAcento2: '#7c3aed',
+  corVerde: '#059669',
+  fontMono: "'Space Mono', monospace",
+  fontSans: "'Sora', 'Inter', sans-serif",
 }
 
 export default themaLight
