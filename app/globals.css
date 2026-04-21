@@ -1,0 +1,6 @@
+/* Estilos base globais — styled-components CreateGlobalStyle trata o restante */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
