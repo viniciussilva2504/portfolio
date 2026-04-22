@@ -7,6 +7,9 @@ export const Card = styled.div`
   transition: all 0.3s ease;
   border-radius: 16px;
   background: ${(props) => props.theme.corSuperficie};
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
   &:hover {
     transform: translateY(-4px);
@@ -27,7 +30,9 @@ export const LinkBotao = styled.a`
   text-decoration: none;
   padding: 8px 20px;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: auto;
+  padding-top: 20px;
+  align-self: center;
   border-radius: 6px;
   transition: all 0.2s ease;
 
