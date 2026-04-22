@@ -14,6 +14,7 @@ export const GithubSecao = styled.div`
     object-fit: contain;
     border-radius: 16px;
     border: 3px solid ${(props) => props.theme.corDaBorda};
+    background: #0a0c10;
     box-shadow: 0 0 10px ${(props) => props.theme.corAcento}35,
       0 0 25px ${(props) => props.theme.corAcento}15,
       inset 0 0 10px ${(props) => props.theme.corAcento}08;
