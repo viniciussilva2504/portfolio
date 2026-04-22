@@ -22,7 +22,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src/",
-    "test": "jest"
+    "test": "jest",
+    "screenshot": "node scripts/screenshot.mjs"
   },
   "browserslist": {
     "production": [
@@ -41,6 +42,7 @@
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.2.0",
+    "puppeteer": "^24.42.0",
     "typescript-eslint": "^8.35.0"
   }
 }
