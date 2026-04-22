@@ -18,6 +18,27 @@
 
 ---
 
+## Index
+
+- [Status](#status)
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Running Locally](#running-locally)
+- [Author](#author)
+- [License](#license)
+
+---
+
+## Status
+
+![Badge](https://img.shields.io/badge/status-active-brightgreen?style=flat-square) ![Badge](https://img.shields.io/badge/deploy-live-000000?style=flat-square&logo=vercel&logoColor=white)
+
+Project live and actively maintained. Open to feedback and contributions.
+
+---
+
 ## Overview
 
 Personal portfolio built with **Next.js 15 App Router** and **TypeScript 5**, showcasing projects, technical stack, and professional background. Designed with a cyberpunk aesthetic and precision focus on UI/UX — a nod to my background in Architecture.
@@ -135,3 +156,9 @@ Architecture background → career transition into tech. Open to work — fronte
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-vjsilva2504-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vjsilva2504/)
 [![GitHub](https://img.shields.io/badge/GitHub-viniciussilva2504-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/viniciussilva2504)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-000000?style=flat-square&logo=vercel&logoColor=white)](https://portfolio-ebon-nine-95.vercel.app)
+
+---
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).

@@ -30,8 +30,7 @@ export const LinkBotao = styled.a`
   text-decoration: none;
   padding: 8px 20px;
   display: inline-block;
-  margin-top: auto;
-  padding-top: 20px;
+  margin-top: 16px;
   align-self: center;
   border-radius: 6px;
   transition: all 0.2s ease;
