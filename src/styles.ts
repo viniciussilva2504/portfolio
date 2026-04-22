@@ -1,9 +1,4 @@
-import styled, { createGlobalStyle, keyframes } from 'styled-components'
-
-const scanline = keyframes`
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-`
+import styled, { createGlobalStyle } from 'styled-components'
 
 const EstiloGlobal = createGlobalStyle`
   * {
@@ -12,11 +7,12 @@ const EstiloGlobal = createGlobalStyle`
     font-family: ${(props) => props.theme.fontSans};
     list-style: none;
     box-sizing: border-box;
+    cursor: none;
   }
 
   body {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     background-color: ${(props) => props.theme.corFundo};
     color: ${(props) => props.theme.corPrincipal};
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -24,43 +20,28 @@ const EstiloGlobal = createGlobalStyle`
     overflow-x: hidden;
 
     @media (max-width: 768px) {
-      padding-top: 16px;
+      padding-top: 24px;
+      cursor: auto;
     }
   }
 
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      ${(props) => props.theme.corAcento}40,
-      transparent
-    );
-    animation: ${scanline} 4s linear infinite;
-    pointer-events: none;
-    z-index: 100;
-    opacity: 0.3;
+  @media (max-width: 768px) {
+    * { cursor: auto; }
   }
 
   ::selection {
-    background: ${(props) => props.theme.corAcento}40;
-    color: ${(props) => props.theme.corPrincipal};
+    background: ${(props) => props.theme.corAcento};
+    color: ${(props) => props.theme.corFundo};
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 2px;
   }
   ::-webkit-scrollbar-track {
     background: ${(props) => props.theme.corFundo};
   }
   ::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme.corAcento}40;
-    border-radius: 3px;
+    background: ${(props) => props.theme.corSecundaria};
   }
 `
 
@@ -70,32 +51,30 @@ export const Container = styled.div`
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 48px;
   display: grid;
-  grid-template-columns: 200px 1fr;
-  column-gap: 48px;
+  grid-template-columns: 220px 1fr;
+  column-gap: 64px;
   position: relative;
   z-index: 1;
 
   @media (max-width: 768px) {
-    max-width: 90%;
+    max-width: 100%;
     display: block;
-    padding: 0 16px;
+    padding: 0 24px;
   }
 `
 
 export const SectionLabel = styled.span`
   font-family: ${(props) => props.theme.fontMono};
-  font-size: 11px;
-  letter-spacing: 3px;
+  font-size: 9px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  color: ${(props) => props.theme.corAcento};
-  background: ${(props) => props.theme.corAcento}12;
-  border: 1px solid ${(props) => props.theme.corAcento}30;
-  padding: 4px 10px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 16px;
+  color: ${(props) => props.theme.corSecundaria};
+  border-bottom: 1px solid ${(props) => props.theme.corDaBorda};
+  padding-bottom: 8px;
+  display: block;
+  margin-bottom: 32px;
 `
 
 export const SectionDivider = styled.div`

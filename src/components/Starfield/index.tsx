@@ -13,15 +13,18 @@ const Canvas = styled.canvas`
   z-index: 0;
 `
 
-type Star = {
+type Column = {
   x: number
   y: number
-  size: number
   speed: number
+  chars: string[]
+  charIndex: number
   opacity: number
-  pulse: number
-  pulseSpeed: number
+  color: string
 }
+
+const CHARS = '01アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMN0123456789'
+const BAUHAUS_COLORS = ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#e8001c', '#0033cc', '#f5d800']
 
 const Starfield = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -29,56 +32,80 @@ const Starfield = () => {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
+    const COL_WIDTH = 18
+    const FONT_SIZE = 11
+    let columns: Column[] = []
     let animationId: number
-    let stars: Star[] = []
 
     const resize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
-      initStars()
+      initColumns()
     }
 
-    const initStars = () => {
-      const count = Math.floor((canvas.width * canvas.height) / 8000)
-      stars = Array.from({ length: count }, () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 1.5 + 0.3,
-        speed: Math.random() * 0.30 + 0.04,
-        opacity: Math.random() * 0.7 + 0.3,
-        pulse: Math.random() * Math.PI * 2,
-        pulseSpeed: Math.random() * 0.02 + 0.005,
-      }))
+    const initColumns = () => {
+      const count = Math.floor(canvas.width / COL_WIDTH)
+      columns = Array.from({ length: count }, (_, i) => {
+        const chars: string[] = Array.from(
+          { length: Math.floor(Math.random() * 12) + 4 },
+          () => CHARS[Math.floor(Math.random() * CHARS.length)]
+        )
+        return {
+          x: i * COL_WIDTH,
+          y: Math.random() * -canvas.height,
+          speed: Math.random() * 0.8 + 0.3,
+          chars,
+          charIndex: 0,
+          opacity: Math.random() * 0.25 + 0.04,
+          color: BAUHAUS_COLORS[Math.floor(Math.random() * BAUHAUS_COLORS.length)],
+        }
+      })
     }
 
     const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.fillStyle = 'rgba(0,0,0,0.04)'
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-      for (const star of stars) {
-        star.pulse += star.pulseSpeed
-        star.y -= star.speed
-        if (star.y < -2) {
-          star.y = canvas.height + 2
-          star.x = Math.random() * canvas.width
+      ctx.font = `${FONT_SIZE}px "Space Mono", monospace`
+
+      for (const col of columns) {
+        col.y += col.speed
+
+        col.charIndex = (col.charIndex + 1) % col.chars.length
+        col.chars[col.charIndex] = CHARS[Math.floor(Math.random() * CHARS.length)]
+
+        for (let j = 0; j < col.chars.length; j++) {
+          const y = col.y - j * (FONT_SIZE + 4)
+          if (y < 0 || y > canvas.height) continue
+
+          const fade = 1 - j / col.chars.length
+          const alpha = col.opacity * fade
+
+          if (j === 0) {
+            ctx.fillStyle = `rgba(255,255,255,${Math.min(alpha * 3, 0.9)})`
+          } else {
+            const isColor = col.color !== '#ffffff'
+            if (isColor) {
+              const r = parseInt(col.color.slice(1, 3), 16)
+              const g = parseInt(col.color.slice(3, 5), 16)
+              const b = parseInt(col.color.slice(5, 7), 16)
+              ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`
+            } else {
+              ctx.fillStyle = `rgba(255,255,255,${alpha})`
+            }
+          }
+
+          ctx.fillText(col.chars[j], col.x, y)
         }
 
-        const flicker = Math.sin(star.pulse) * 0.3 + 0.7
-        const alpha = star.opacity * flicker
-
-        ctx.beginPath()
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(0, 229, 255, ${alpha})`
-        ctx.fill()
-
-        if (star.size > 1) {
-          ctx.beginPath()
-          ctx.arc(star.x, star.y, star.size * 3, 0, Math.PI * 2)
-          ctx.fillStyle = `rgba(0, 229, 255, ${alpha * 0.08})`
-          ctx.fill()
+        if (col.y - col.chars.length * (FONT_SIZE + 4) > canvas.height) {
+          col.y = Math.random() * -200 - 50
+          col.speed = Math.random() * 0.8 + 0.3
+          col.opacity = Math.random() * 0.25 + 0.04
+          col.color = BAUHAUS_COLORS[Math.floor(Math.random() * BAUHAUS_COLORS.length)]
         }
       }
 
@@ -99,3 +126,4 @@ const Starfield = () => {
 }
 
 export default Starfield
+

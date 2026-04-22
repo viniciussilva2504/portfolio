@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components'
 
 import ErrorBoundary from '../ErrorBoundary'
 import Starfield from '../Starfield'
+import CustomCursor from '../CustomCursor'
 import Sidebar from '../../containers/Sidebar'
 import EstiloGlobal, { Container } from '../../styles'
 import temaLight from '../../themes/light'
@@ -24,6 +25,7 @@ export default function PortfolioApp() {
   return (
     <ThemeProvider theme={estaUsandoTemaDark ? temaDark : temaLight}>
       <EstiloGlobal />
+      <CustomCursor />
       <Starfield />
       <ErrorBoundary>
         <Container>
