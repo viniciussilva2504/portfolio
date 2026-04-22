@@ -150,7 +150,7 @@ npm run screenshot # in another — saves to public/screenshots/
 
 ## Author
 
-**Vinicius Jesus da Silva** — Frontend Developer based in Porto, Portugal.  
+**Vinicius Jesus da Silva** — Frontend Developer based in Porto, Portugal.
 Architecture background → career transition into tech. Open to work — frontend roles, remote or hybrid.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-vjsilva2504-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vjsilva2504/)
