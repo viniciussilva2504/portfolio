@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const GithubSecao = styled.div`
-  margin-top: 40px;
+  margin-top: 32px;
   margin-bottom: 48px;
   display: flex;
   gap: 16px;
@@ -12,13 +12,12 @@ export const GithubSecao = styled.div`
     min-width: 0;
     height: auto;
     object-fit: contain;
-    filter: grayscale(100%) contrast(0.8);
-    border: 1px solid ${(props) => props.theme.corDaBorda};
-    transition: filter 0.3s ease;
-
-    &:hover {
-      filter: grayscale(0%);
-    }
+    border-radius: 16px;
+    border: 3px solid ${(props) => props.theme.corDaBorda};
+    box-shadow: 0 0 10px ${(props) => props.theme.corAcento}35,
+      0 0 25px ${(props) => props.theme.corAcento}15,
+      inset 0 0 10px ${(props) => props.theme.corAcento}08;
+    transition: box-shadow 0.3s ease;
   }
 
   @media (max-width: 768px) {
@@ -29,43 +28,52 @@ export const GithubSecao = styled.div`
 export const SkillGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 24px;
-  margin-bottom: 40px;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 32px;
 `
 
 export const SkillBadge = styled.span<{ $variant?: 'primary' | 'secondary' | 'accent' }>`
   font-family: ${(props) => props.theme.fontMono};
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border: 1px solid ${(props) => props.theme.corDaBorda};
-  color: ${(props) => props.theme.corSecundaria};
-  transition: all 0.15s ease;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 
   ${(props) => {
     switch (props.$variant) {
       case 'accent':
-        return `border-color: ${props.theme.corAcento2}40; color: ${props.theme.corAcento2};`
+        return `
+          background: ${props.theme.corAcento2}18;
+          color: ${props.theme.corAcento2};
+          border: 1px solid ${props.theme.corAcento2}40;
+        `
       case 'secondary':
-        return `border-color: ${props.theme.corVerde}40; color: ${props.theme.corVerde};`
+        return `
+          background: ${props.theme.corVerde}15;
+          color: ${props.theme.corVerde};
+          border: 1px solid ${props.theme.corVerde}35;
+        `
       default:
-        return ''
+        return `
+          background: ${props.theme.corAcento}12;
+          color: ${props.theme.corAcento};
+          border: 1px solid ${props.theme.corAcento}30;
+        `
     }
   }}
 
   &:hover {
-    border-color: ${(props) => props.theme.corAcento};
-    color: ${(props) => props.theme.corAcento};
+    transform: translateY(-1px);
   }
 `
 
 export const SobreContainer = styled.div`
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 `
 
 export const HighlightText = styled.span`
   color: ${(props) => props.theme.corAcento};
-  font-weight: 700;
+  font-weight: 600;
 `

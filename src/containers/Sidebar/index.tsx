@@ -56,7 +56,7 @@ const Sidebar = (props: Props) => (
       </SidebarLinks>
       <br />
       <BotaoTema onClick={props.trocarTema}>
-        {props.estaUsandoTemaDark ? '◑ LIGHT' : '◐ DARK'}
+        {props.estaUsandoTemaDark ? '☀️ LIGHT' : '🌙 DARK'}
       </BotaoTema>
     </SidebarContainer>
   </aside>
