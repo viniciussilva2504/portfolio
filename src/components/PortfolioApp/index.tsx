@@ -4,6 +4,7 @@ import { lazy, Suspense, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import ErrorBoundary from '../ErrorBoundary'
+import Hero from '../Hero'
 import Starfield from '../Starfield'
 import Sidebar from '../../containers/Sidebar'
 import EstiloGlobal, { Container } from '../../styles'
@@ -32,6 +33,7 @@ export default function PortfolioApp() {
             estaUsandoTemaDark={estaUsandoTemaDark}
           />
           <main>
+            <Hero />
             <Suspense fallback={<div>Loading...</div>}>
               <Sobre />
               <Projetos />
