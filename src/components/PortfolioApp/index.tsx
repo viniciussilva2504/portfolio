@@ -1,19 +1,18 @@
 'use client'
 
-import { lazy, Suspense, useState } from 'react'
+import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import ErrorBoundary from '../ErrorBoundary'
 import Hero from '../Hero'
 import Starfield from '../Starfield'
 import Sidebar from '../../containers/Sidebar'
+import Sobre from '../../containers/Sobre'
+import Projetos from '../../containers/Projetos'
+import AISkills from '../../containers/AISkills'
 import EstiloGlobal, { Container } from '../../styles'
 import temaLight from '../../themes/light'
 import temaDark from '../../themes/dark'
-
-const Sobre = lazy(() => import('../../containers/Sobre'))
-const Projetos = lazy(() => import('../../containers/Projetos'))
-const AISkills = lazy(() => import('../../containers/AISkills'))
 
 export default function PortfolioApp() {
   const [estaUsandoTemaDark, setestaUsandoTemaDark] = useState(true)
@@ -34,11 +33,9 @@ export default function PortfolioApp() {
           />
           <main>
             <Hero />
-            <Suspense fallback={<div>Loading...</div>}>
-              <Sobre />
-              <Projetos />
-              <AISkills />
-            </Suspense>
+            <Sobre />
+            <Projetos />
+            <AISkills />
           </main>
         </Container>
       </ErrorBoundary>
