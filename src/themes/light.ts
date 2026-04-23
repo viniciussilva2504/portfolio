@@ -9,8 +9,8 @@ const themaLight = {
   corAcento: '#0284c7',
   corAcento2: '#7c3aed',
   corVerde: '#059669',
-  fontMono: "var(--font-space-mono), monospace",
-  fontSans: "var(--font-sora), 'Inter', sans-serif",
+  fontMono: "var(--font-space-mono), 'Courier New', monospace",
+  fontSans: "var(--font-inter), 'Helvetica Neue', Helvetica, Arial, sans-serif",
 }
 
 export default themaLight

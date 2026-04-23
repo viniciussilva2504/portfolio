@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Sora, Space_Mono } from 'next/font/google'
+import { Inter, Space_Mono } from 'next/font/google'
 import StyledComponentsRegistry from '@/lib/registry'
 import './globals.css'
 
-const sora = Sora({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-sora',
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -82,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${sora.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>

@@ -9,8 +9,8 @@ const themaDark = {
   corAcento: '#00e5ff',
   corAcento2: '#7c3aed',
   corVerde: '#10b981',
-  fontMono: "var(--font-space-mono), monospace",
-  fontSans: "var(--font-sora), 'Inter', sans-serif",
+  fontMono: "var(--font-space-mono), 'Courier New', monospace",
+  fontSans: "var(--font-inter), 'Helvetica Neue', Helvetica, Arial, sans-serif",
 }
 
 export default themaDark
