@@ -4,9 +4,20 @@ const projetos: ProjetoProps[] = [
   {
     titulo: 'eFood — Delivery Platform',
     descricao:
-      'Full-featured food delivery app with auth, favorites, reviews, geolocation and Supabase backend',
+      'Full-featured food delivery app with auth, favorites, reviews, geolocation and Supabase backend. Built from scratch with complex state management via Redux and real-time data.',
     link: 'https://efood-parte-2.vercel.app',
+    githubLink: 'https://github.com/viniciussilva2504/efood',
     tags: ['React', 'TypeScript', 'Redux', 'Supabase', 'ViaCEP'],
+    featured: true,
+  },
+  {
+    titulo: 'Portfolio — This Site',
+    descricao:
+      'Personal portfolio built with Next.js 15 App Router, styled-components 6 ThemeProvider, dark/light theming, Starfield animation and lazy-loaded sections. Built with Claude Code subagents.',
+    link: 'https://portfolio-ebon-nine-95.vercel.app',
+    githubLink: 'https://github.com/viniciussilva2504/portfolio',
+    tags: ['Next.js', 'React', 'TypeScript', 'styled-components'],
+    featured: true,
   },
   {
     titulo: 'Social Media API',
