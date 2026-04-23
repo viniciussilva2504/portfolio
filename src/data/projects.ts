@@ -13,7 +13,7 @@ const projetos: ProjetoProps[] = [
   {
     titulo: 'Portfolio — This Site',
     descricao:
-      'Personal portfolio built with Next.js 15 App Router, styled-components 6 ThemeProvider, dark/light theming, Starfield animation and lazy-loaded sections. Built with Claude Code subagents.',
+      'Personal portfolio built with Next.js 15 App Router, styled-components 6 ThemeProvider, dark/light theming, Starfield animation and lazy-loaded sections.',
     link: 'https://portfolio-ebon-nine-95.vercel.app',
     githubLink: 'https://github.com/viniciussilva2504/portfolio',
     tags: ['Next.js', 'React', 'TypeScript', 'styled-components'],
@@ -22,23 +22,31 @@ const projetos: ProjetoProps[] = [
   {
     titulo: 'Social Media API',
     descricao:
-      'RESTful social media API built with Python — final course project demonstrating backend skills',
+      'Production-ready RESTful API for a social network — final course project. Endpoints for users, posts, follows and feed with Django REST Framework.',
     link: 'https://github.com/viniciussilva2504/social_media_API',
-    tags: ['Python', 'Django', 'REST API'],
+    tags: ['Python', 'Django', 'REST API', 'PostgreSQL'],
+  },
+  {
+    titulo: 'Task Manager — Redux',
+    descricao:
+      'To-do app with complete CRUD, priority levels (Urgent/Important/Normal), status filters and Redux slices for tasks and filters. localStorage persistence.',
+    link: 'https://minhas-tarefas-qbvq6g7hg-vinicius-silvas-projects-6f23ba6d.vercel.app/',
+    githubLink: 'https://github.com/viniciussilva2504/minhas-tarefas',
+    tags: ['React', 'TypeScript', 'Redux'],
   },
   {
     titulo: 'Cypress E2E Testing',
     descricao:
-      'End-to-end automated test suite for web APIs using Cypress — showcasing QA testing skills',
+      'Automated end-to-end test suite covering web flows with Cypress — assertions, fixtures, custom commands and API mocking.',
     link: 'https://github.com/viniciussilva2504/exercicio-cypress',
-    tags: ['Cypress', 'E2E', 'JavaScript', 'QA'],
+    tags: ['Cypress', 'E2E Testing', 'QA', 'JavaScript'],
   },
   {
-    titulo: 'Task Manager',
+    titulo: 'Python Data Analysis',
     descricao:
-      'To-do list application with complete CRUD, filters and state management via Redux',
-    link: 'https://minhas-tarefas-qbvq6g7hg-vinicius-silvas-projects-6f23ba6d.vercel.app/',
-    tags: ['React', 'TypeScript', 'Redux'],
+      'Data extraction, web scraping and graphical analysis with Python — demonstrates backend and data skills beyond web development.',
+    link: 'https://github.com/viniciussilva2504/extracao.py',
+    tags: ['Python', 'Data Analysis', 'Web Scraping'],
   },
   {
     titulo: 'Contact List',
@@ -46,27 +54,6 @@ const projetos: ProjetoProps[] = [
       'Contact manager with React and Redux — features search, edit and delete functionality',
     link: 'https://lista-de-contatos-react-iota-navy.vercel.app/',
     tags: ['React', 'TypeScript', 'Redux'],
-  },
-  {
-    titulo: 'Disney+ Clone',
-    descricao:
-      'Pixel-perfect frontend clone of the Disney+ streaming interface',
-    link: 'https://clone-disneyplus-mu-two.vercel.app/',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    titulo: 'Vue.js Calculator',
-    descricao:
-      'Arithmetic calculator built with Vue.js — demonstrates framework versatility',
-    link: 'https://calculadora-vuejs-theta.vercel.app/',
-    tags: ['Vue.js', 'JavaScript'],
-  },
-  {
-    titulo: 'Python Data Analysis',
-    descricao:
-      'Data extraction and graphical analysis using Python and web scraping',
-    link: 'https://github.com/viniciussilva2504/extracao.py',
-    tags: ['Python', 'Data Analysis'],
   },
 ]
 

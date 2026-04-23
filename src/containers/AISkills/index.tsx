@@ -8,7 +8,30 @@ import {
   AICardDesc,
 } from './styles'
 
-const aiTools = [
+const qaItems = [
+  {
+    title: 'Cypress E2E Test Suite',
+    desc: 'Automated end-to-end tests covering user flows, API interactions and UI assertions. DOM queries, fixtures and custom commands.',
+    link: 'https://github.com/viniciussilva2504/exercicio-cypress',
+  },
+  {
+    title: 'React Testing Library — eFood',
+    desc: 'Component and integration tests on a production delivery platform. render, userEvent, waitFor and mock strategies.',
+    link: 'https://github.com/viniciussilva2504/efood',
+  },
+  {
+    title: 'QA Bootcamps (in progress)',
+    desc: 'Two parallel QA Engineering bootcamps — 60% complete. Manual testing, test planning, bug reporting, automation with Cypress and Jest.',
+    link: 'https://github.com/viniciussilva2504',
+  },
+  {
+    title: 'Quality Strategy',
+    desc: 'Test plans, acceptance criteria and bug triage on real user stories. Covers unit, integration and E2E layers across React + Python projects.',
+    link: 'https://github.com/viniciussilva2504',
+  },
+]
+
+const aiItems = [
   {
     title: 'Claude Code Subagents',
     desc: 'Curated collection of Claude Code subagent patterns for automated coding workflows',
@@ -26,25 +49,43 @@ const aiTools = [
   },
   {
     title: 'AI-Powered Portfolio',
-    desc: 'This portfolio was built with Claude Code — cyberpunk design, subagents, automated testing',
+    desc: 'This portfolio was built with Claude Code — dark design system, subagents, ISR, styled-components theming',
     link: 'https://github.com/viniciussilva2504/portfolio',
   },
 ]
 
 const AISkills = () => (
   <AIContainer id="ai">
-    <SectionLabel>03 // AI TOOLING</SectionLabel>
+    <SectionLabel>03 // QA &amp; AI TOOLING</SectionLabel>
     <br />
     <br />
     <Paragrafo tipo="principal">
-      Using AI tools like Claude Code and custom subagents to accelerate
-      development, automate testing workflows, and ship faster with higher code
-      quality.
+      Quality engineering across the full stack — automated E2E with Cypress,
+      component tests with React Testing Library, and test planning on real
+      projects. Accelerated by AI tools: Claude Code and custom subagents for
+      faster, higher-quality delivery.
     </Paragrafo>
+
+    <SectionLabel style={{ marginTop: '24px', marginBottom: '8px' }}>// QA TESTING</SectionLabel>
     <AIGrid>
-      {aiTools.map((tool) => (
+      {qaItems.map((item) => (
         <AICard
-          key={tool.link}
+          key={item.link + item.title}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <AICardTitle>↗ {item.title}</AICardTitle>
+          <AICardDesc>{item.desc}</AICardDesc>
+        </AICard>
+      ))}
+    </AIGrid>
+
+    <SectionLabel style={{ marginTop: '28px', marginBottom: '8px' }}>// AI TOOLING</SectionLabel>
+    <AIGrid>
+      {aiItems.map((tool) => (
+        <AICard
+          key={tool.link + tool.title}
           href={tool.link}
           target="_blank"
           rel="noopener noreferrer"
