@@ -15,7 +15,7 @@ const Hero = () => (
       I build for the web.
     </HeroHeading>
     <HeroSubheading>
-      Frontend Developer · React · TypeScript · Porto, PT
+      Full Stack Dev · QA Engineer · React · TypeScript · Python
     </HeroSubheading>
     <HeroLocation>📍 Porto, Portugal — Open to remote &amp; hybrid roles in Europe</HeroLocation>
   </HeroWrapper>

@@ -61,10 +61,10 @@ const Sidebar = (props: Props) => {
         <Avatar />
         <Title fontSize={20}>Vinicius J. Silva</Title>
         <Paragrafo tipo="secundario" fontSize={14}>
-          Frontend Developer
+          Frontend Dev · QA Engineer
         </Paragrafo>
         <Descricao tipo="principal" fontSize={11}>
-          React · TypeScript · Cypress
+          React · TypeScript · Python
         </Descricao>
         <Paragrafo tipo="secundario" fontSize={11}>
           Open to work — Porto, PT

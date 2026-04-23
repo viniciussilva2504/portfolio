@@ -17,6 +17,7 @@ export const Card = styled.div<{ $featured?: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: ${(props) => (props.$featured ? '12px' : '0px')};
 
   &:hover {
     transform: translateY(-4px);
@@ -38,7 +39,6 @@ export const FeaturedBadge = styled.span`
   padding: 3px 10px;
   border-radius: 4px;
   align-self: flex-end;
-  margin-bottom: 12px;
 `
 
 export const BotoesContainer = styled.div`

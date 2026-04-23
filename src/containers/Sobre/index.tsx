@@ -24,29 +24,33 @@ const Sobre = () => {
       <br />
       <br />
       <Paragrafo tipo="principal">
-        Frontend Developer with hands-on experience building responsive,
-        user-friendly interfaces with React, TypeScript, Redux and
-        styled-components. Skilled in automated testing with Cypress E2E and
-        React Testing Library. Background in Architecture that sharpens my eye
-        for UX, layout systems and visual detail. Comfortable with Python, REST
-        APIs, Supabase and Git-based workflows. Leveraging AI tools like Claude
-        Code for accelerated development and code quality.
+        Full Stack Developer and QA Engineer with a strong focus on React,
+        TypeScript and Python. I build responsive, accessible interfaces with
+        React 19, Redux and styled-components, and automate quality assurance
+        with Cypress E2E, React Testing Library and Jest. Full stack capabilities
+        include Python (Django, Flask), REST APIs and Supabase. Currently
+        specialising in QA Engineering — 60% through two parallel QA bootcamps.
+        Architecture background that sharpens UX thinking and visual systems.
+        Leveraging AI tools like Claude Code for quality-driven, accelerated
+        development.
       </Paragrafo>
       <SkillGrid>
         <SkillBadge>React</SkillBadge>
         <SkillBadge>TypeScript</SkillBadge>
+        <SkillBadge>Next.js</SkillBadge>
         <SkillBadge>Redux</SkillBadge>
         <SkillBadge>styled-components</SkillBadge>
-        <SkillBadge>Next.js</SkillBadge>
         <SkillBadge $variant="secondary">Cypress E2E</SkillBadge>
         <SkillBadge $variant="secondary">React Testing Library</SkillBadge>
         <SkillBadge $variant="secondary">Jest</SkillBadge>
-        <SkillBadge $variant="accent">Claude Code</SkillBadge>
-        <SkillBadge $variant="accent">AI Agents</SkillBadge>
+        <SkillBadge $variant="secondary">QA Engineering</SkillBadge>
         <SkillBadge $variant="accent">Python</SkillBadge>
-        <SkillBadge>Git</SkillBadge>
+        <SkillBadge $variant="accent">Django</SkillBadge>
+        <SkillBadge $variant="accent">Flask</SkillBadge>
+        <SkillBadge $variant="accent">REST APIs</SkillBadge>
         <SkillBadge>Supabase</SkillBadge>
-        <SkillBadge>REST APIs</SkillBadge>
+        <SkillBadge>Git</SkillBadge>
+        <SkillBadge>Claude Code</SkillBadge>
       </SkillGrid>
       <GithubSecao>
         <img src={statsUrl} alt="GitHub Stats do Vinicius Silva" />
