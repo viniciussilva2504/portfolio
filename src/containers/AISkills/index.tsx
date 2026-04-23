@@ -32,7 +32,7 @@ const aiTools = [
 ]
 
 const AISkills = () => (
-  <AIContainer>
+  <AIContainer id="ai">
     <SectionLabel>03 // AI TOOLING</SectionLabel>
     <br />
     <br />

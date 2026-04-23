@@ -6,6 +6,10 @@ const scanline = keyframes`
 `
 
 const EstiloGlobal = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -72,7 +76,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 32px;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 260px 1fr;
   column-gap: 48px;
   position: relative;
   z-index: 1;
