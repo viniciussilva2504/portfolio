@@ -15,7 +15,7 @@ import temaLight from '../../themes/light'
 import temaDark from '../../themes/dark'
 
 export default function PortfolioApp() {
-  const [estaUsandoTemaDark, setestaUsandoTemaDark] = useState(true)
+  const [estaUsandoTemaDark, setestaUsandoTemaDark] = useState(false)
 
   function trocaTema() {
     setestaUsandoTemaDark(!estaUsandoTemaDark)

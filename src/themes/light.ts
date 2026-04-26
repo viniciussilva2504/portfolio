@@ -7,7 +7,7 @@ const themaLight = {
   corSuperficie: '#ffffff',
   corSuperficie2: '#f1f5f9',
   corAcento: '#0284c7',
-  corAcento2: '#7c3aed',
+  corAcento2: '#a855f7',
   corVerde: '#059669',
   fontMono: "var(--font-space-mono), 'Courier New', monospace",
   fontSans: "var(--font-inter), 'Helvetica Neue', Helvetica, Arial, sans-serif",

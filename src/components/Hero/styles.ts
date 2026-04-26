@@ -23,6 +23,11 @@ export const HeroLabel = styled.span`
   color: ${(props) => props.theme.corAcento};
   display: block;
   margin-bottom: 16px;
+  text-shadow:
+    0 0 4px ${(props) => props.theme.corAcento},
+    0 0 12px ${(props) => props.theme.corAcento}99,
+    0 0 24px ${(props) => props.theme.corAcento}55,
+    0 0 40px ${(props) => props.theme.corAcento}33;
 `
 
 export const HeroHeading = styled.h1`
@@ -37,6 +42,13 @@ export const HeroHeading = styled.h1`
   span {
     color: ${(props) => props.theme.corAcento};
   }
+
+  &::after {
+    content: '|';
+    color: ${(props) => props.theme.corAcento};
+    margin-left: 2px;
+    animation: ${cursorBlink} 1s step-end infinite;
+  }
 `
 
 export const HeroSubheading = styled.h2`
@@ -46,13 +58,6 @@ export const HeroSubheading = styled.h2`
   color: ${(props) => props.theme.corSecundaria};
   margin-bottom: 20px;
   line-height: 1.5;
-
-  &::after {
-    content: '|';
-    color: ${(props) => props.theme.corAcento};
-    margin-left: 2px;
-    animation: ${cursorBlink} 1s step-end infinite;
-  }
 `
 
 export const HeroLocation = styled.p`

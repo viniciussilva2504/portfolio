@@ -7,7 +7,7 @@ const themaDark = {
   corSuperficie: '#111318',
   corSuperficie2: '#181c24',
   corAcento: '#00e5ff',
-  corAcento2: '#7c3aed',
+  corAcento2: '#a855f7',
   corVerde: '#10b981',
   fontMono: "var(--font-space-mono), 'Courier New', monospace",
   fontSans: "var(--font-inter), 'Helvetica Neue', Helvetica, Arial, sans-serif",
