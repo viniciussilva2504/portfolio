@@ -61,7 +61,6 @@ Key engineering decisions made consciously:
 | **UI Library** | [React 19](https://react.dev/) |
 | **Styling** | [styled-components 6](https://styled-components.com/) — ThemeProvider, CSS-in-JS, SSR registry |
 | **Fonts** | `next/font` — Sora + Space Mono, zero CLS |
-| **Testing** | React Testing Library, Jest |
 | **Linting** | ESLint + typescript-eslint |
 | **Deploy** | [Vercel](https://vercel.com/) — automatic on push to `main` |
 
@@ -137,9 +136,6 @@ npm start
 
 # Lint
 npm run lint
-
-# Tests
-npm test
 
 # Generate screenshots for README (requires dev server running)
 npm run dev        # in one terminal
