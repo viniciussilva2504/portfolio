@@ -14,7 +14,7 @@ type State = {
 const ErrorContainer = styled.div`
   text-align: center;
   padding: 40px 20px;
-  color: ${(props) => props.theme.corPrincipal};
+  color: var(--color-text);
 `
 
 const ErrorTitle = styled.h2`
@@ -24,16 +24,15 @@ const ErrorTitle = styled.h2`
 
 const ErrorMessage = styled.p`
   font-size: 14px;
-  color: ${(props) => props.theme.corSecundaria};
+  color: var(--color-muted);
   margin-bottom: 20px;
 `
 
 const ReloadButton = styled.button`
   padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
-  background-color: ${(props) => props.theme.corDeFundoBotao};
-  color: ${(props) => props.theme.corFundo};
+  border: 1px solid var(--color-text);
+  background-color: var(--color-text);
+  color: var(--color-bg);
   font-size: 14px;
   cursor: pointer;
   transition: opacity 0.2s ease;

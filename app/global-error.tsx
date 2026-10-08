@@ -14,22 +14,22 @@ export default function GlobalError({
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          minHeight: '100vh',
-          gap: '16px',
-          fontFamily: 'sans-serif',
-          background: '#0a0c10',
-          color: '#e2e8f0',
+          minHeight: '100svh',
+          gap: '1rem',
+          padding: '2rem',
+          fontFamily: 'Inter, Arial, sans-serif',
+          background: '#FAFAF7',
+          color: '#111111',
         }}
       >
-        <h2 style={{ fontSize: '20px' }}>Something went wrong</h2>
+        <h1 style={{ fontSize: 'clamp(1.75rem, 6vw, 2.5rem)' }}>Something went wrong</h1>
         <button
           onClick={reset}
           style={{
-            padding: '8px 16px',
-            background: '#00e5ff',
-            color: '#0a0c10',
-            border: 'none',
-            borderRadius: '4px',
+            padding: '0.7rem 1rem',
+            background: '#111111',
+            color: '#FAFAF7',
+            border: '1px solid #111111',
             cursor: 'pointer',
             fontWeight: 600,
           }}

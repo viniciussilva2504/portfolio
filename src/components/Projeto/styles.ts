@@ -1,110 +1,68 @@
 import styled from 'styled-components'
 
-export const Card = styled.div<{ $featured?: boolean }>`
-  border: 3px solid
-    ${(props) =>
-      props.$featured
-        ? `${props.theme.corAcento}50`
-        : props.theme.corDaBorda};
-  padding: ${(props) => (props.$featured ? '28px 24px' : '20px 16px')};
-  text-align: center;
-  transition: all 0.3s ease;
-  border-radius: 16px;
-  background: ${(props) =>
-    props.$featured
-      ? `linear-gradient(135deg, ${props.theme.corSuperficie} 0%, ${props.theme.corSuperficie2} 100%)`
-      : props.theme.corSuperficie};
+export const Card = styled.article`
+  width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: ${(props) => (props.$featured ? '12px' : '0px')};
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: ${(props) => props.theme.corAcento}80;
-    box-shadow: 0 0 16px ${(props) => props.theme.corAcento}55,
-      0 0 40px ${(props) => props.theme.corAcento}25,
-      inset 0 0 10px ${(props) => props.theme.corAcento}08;
-  }
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: var(--border);
+  background: var(--color-bg);
+  transition: border-color 160ms ease, transform 160ms ease;
+  &:hover { border-color: var(--color-blue); transform: translateY(-2px); }
 `
-
-export const FeaturedBadge = styled.span`
-  font-family: ${(props) => props.theme.fontMono};
-  font-size: 10px;
-  letter-spacing: 2px;
+export const CardType = styled.p`
+  margin: 0 0 0.5rem;
+  color: var(--color-red);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${(props) => props.theme.corAcento};
-  background: ${(props) => props.theme.corAcento}15;
-  border: 1px solid ${(props) => props.theme.corAcento}40;
-  padding: 3px 10px;
-  border-radius: 4px;
-  align-self: flex-end;
+  font-weight: 700;
 `
-
-export const BotoesContainer = styled.div`
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 16px;
+export const CardHeading = styled.h3`
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
 `
-
-export const LinkBotao = styled.a`
-  color: ${(props) => props.theme.corFundo};
-  font-size: 12px;
-  font-family: ${(props) => props.theme.fontMono};
-  font-weight: bold;
-  letter-spacing: 1px;
-  background-color: ${(props) => props.theme.corAcento};
-  text-decoration: none;
-  padding: 8px 20px;
-  display: inline-block;
-  align-self: center;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-
-  &:hover {
-    box-shadow: 0 0 12px ${(props) => props.theme.corAcento}50;
-    transform: scale(1.02);
-  }
+export const CardDetails = styled.dl`
+  margin: 1rem 0 0;
+  border-top: 1px solid var(--color-text);
 `
-
-export const GitHubBotao = styled.a`
-  color: ${(props) => props.theme.corAcento};
-  font-size: 12px;
-  font-family: ${(props) => props.theme.fontMono};
-  font-weight: bold;
-  letter-spacing: 1px;
-  background: transparent;
-  border: 1px solid ${(props) => props.theme.corAcento}50;
-  text-decoration: none;
-  padding: 8px 20px;
-  display: inline-block;
-  align-self: center;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background: ${(props) => props.theme.corAcento}10;
-    box-shadow: 0 0 12px ${(props) => props.theme.corAcento}30;
-  }
+export const Detail = styled.div`
+  display: grid;
+  grid-template-columns: minmax(6.5rem, 0.32fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  padding-block: 0.65rem;
+  border-bottom: 1px solid #11111133;
+  dt { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  dd { margin: 0; color: var(--color-muted); font-size: 0.875rem; line-height: 1.5; overflow-wrap: anywhere; }
+  @media (max-width: 380px) { grid-template-columns: 1fr; gap: 0.15rem; }
 `
-
-export const TagsContainer = styled.div`
+export const TagsContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  justify-content: center;
-  margin-top: 12px;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
 `
-
-export const Tag = styled.span`
-  font-family: ${(props) => props.theme.fontMono};
-  font-size: 10px;
-  letter-spacing: 0.5px;
-  padding: 3px 10px;
-  border-radius: 4px;
-  background-color: ${(props) => props.theme.corAcento}10;
-  color: ${(props) => props.theme.corAcento};
-  border: 1px solid ${(props) => props.theme.corAcento}25;
-  transition: all 0.2s ease;
+export const Tag = styled.li`
+  padding: 0.2rem 0.45rem;
+  border: 1px solid #11111166;
+  color: var(--color-text);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+`
+export const ProjectLinks = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  a { font-size: 0.8rem; font-weight: 700; text-underline-offset: 0.25em; }
+  a:hover { text-decoration-color: var(--color-blue); }
 `

@@ -1,33 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Mono } from 'next/font/google'
 import StyledComponentsRegistry from '@/lib/registry'
 import './globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-const spaceMono = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-space-mono',
-  display: 'swap',
-})
 
 const BASE_URL = 'https://portfolio-ebon-nine-95.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Vinicius J. Silva — Frontend Developer',
+    default: 'Vinicius Jesus da Silva — QA Analyst',
     template: '%s | Vinicius J. Silva',
   },
   description:
-    'Frontend Developer based in Porto, Portugal. Specialised in React, TypeScript, Redux and styled-components. Architecture background with a strong eye for UX and visual systems.',
+    'Vinicius Jesus da Silva is a QA Analyst in Porto, Portugal, focused on software testing, test automation, API validation and reliable user experiences.',
   keywords: [
-    'Frontend Developer',
+    'QA Analyst',
+    'Software Testing',
+    'Test Automation',
+    'Quality Engineering',
     'React',
     'TypeScript',
     'Redux',
@@ -42,25 +31,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: BASE_URL,
-    title: 'Vinicius J. Silva — Frontend Developer',
+    title: 'Vinicius Jesus da Silva — QA Analyst',
     description:
-      'Frontend Developer based in Porto, Portugal. React · TypeScript · Redux · Cypress. Architecture background, open to work.',
+      'QA Analyst focused on software testing, test automation and API validation. Based in Porto, Portugal.',
     siteName: 'Vinicius J. Silva Portfolio',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Vinicius J. Silva — Frontend Developer Portfolio',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vinicius J. Silva — Frontend Developer',
-    description:
-      'Frontend Developer based in Porto, Portugal. React · TypeScript · Redux · Cypress.',
-    images: ['/og-image.png'],
+    title: 'Vinicius Jesus da Silva — QA Analyst',
+    description: 'QA Analyst focused on software testing and test automation.',
   },
   robots: {
     index: true,
@@ -82,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
+    <html lang="en">
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>

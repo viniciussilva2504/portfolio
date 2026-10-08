@@ -1,48 +1,34 @@
 import { render, screen } from '@testing-library/react'
-import { ThemeProvider } from 'styled-components'
 import Projeto from '.'
-import themaLight from '../../themes/light'
 
-const renderWithTheme = (ui: React.ReactElement) =>
-  render(<ThemeProvider theme={themaLight}>{ui}</ThemeProvider>)
-
-describe('Projeto', () => {
+describe('Project card', () => {
   const props = {
-    titulo: 'Test Project',
-    descricao: 'A test project description',
-    link: 'https://example.com',
-    tags: ['React', 'TypeScript'],
+    titulo: 'Cypress E2E Testing',
+    tipo: 'Web · End-to-end automation',
+    objetivo: 'Automate browser-level validation of web user flows.',
+    abordagem: 'Test repository with fixtures and API mocking.',
+    evidencia: 'Cypress test repository',
+    link: 'https://github.com/example/project',
+    tags: ['Cypress', 'E2E'],
   }
 
-  it('renders the project title', () => {
-    renderWithTheme(<Projeto {...props} />)
-    expect(screen.getByText('Test Project')).toBeInTheDocument()
+  it('renders objective, approach and evidence', () => {
+    render(<Projeto {...props} />)
+    expect(screen.getByRole('heading', { name: props.titulo })).toBeInTheDocument()
+    expect(screen.getByText(props.objetivo)).toBeInTheDocument()
+    expect(screen.getByText(props.abordagem)).toBeInTheDocument()
+    expect(screen.getByText(props.evidencia)).toBeInTheDocument()
   })
 
-  it('renders the project description', () => {
-    renderWithTheme(<Projeto {...props} />)
-    expect(screen.getByText('A test project description')).toBeInTheDocument()
+  it('renders repository and technology links with accessible names', () => {
+    render(<Projeto {...props} />)
+    expect(screen.getByRole('link', { name: /View repository/i })).toHaveAttribute('href', props.link)
+    expect(screen.getByText('Cypress')).toBeInTheDocument()
+    expect(screen.getByText('E2E')).toBeInTheDocument()
   })
 
-  it('renders a link with correct href and target', () => {
-    renderWithTheme(<Projeto {...props} />)
-    const link = screen.getByText('Visualizar')
-    expect(link).toHaveAttribute('href', 'https://example.com')
-    expect(link).toHaveAttribute('target', '_blank')
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
-  })
-
-  it('renders technology tags', () => {
-    renderWithTheme(<Projeto {...props} />)
-    expect(screen.getByText('React')).toBeInTheDocument()
-    expect(screen.getByText('TypeScript')).toBeInTheDocument()
-  })
-
-  it('renders without tags when not provided', () => {
-    const { titulo, descricao, link } = props
-    renderWithTheme(
-      <Projeto titulo={titulo} descricao={descricao} link={link} />
-    )
-    expect(screen.getByText('Test Project')).toBeInTheDocument()
+  it('shows a separate project link when the repository differs', () => {
+    render(<Projeto {...props} githubLink="https://github.com/example/project" />)
+    expect(screen.getByRole('link', { name: /View project/i })).toHaveAttribute('href', props.link)
   })
 })

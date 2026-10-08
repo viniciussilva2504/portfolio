@@ -1,29 +1,17 @@
 import Projeto from '../../components/Projeto'
 import projetos from '../../data/projects'
 import { SectionLabel } from '../../styles'
+import { Lista, ProjectsSection, SectionIntro } from './styles'
 
-import { Lista } from './styles'
-
-const Projetos = () => (
-  <section id="projects">
-    <SectionLabel>02 // PROJECTS</SectionLabel>
-    <br />
-    <br />
-    <Lista>
-      {projetos.map((projeto) => (
-        <li key={projeto.link} className={projeto.featured ? 'featured' : ''}>
-          <Projeto
-            titulo={projeto.titulo}
-            descricao={projeto.descricao}
-            link={projeto.link}
-            tags={projeto.tags}
-            featured={projeto.featured}
-            githubLink={projeto.githubLink}
-          />
-        </li>
-      ))}
-    </Lista>
-  </section>
-)
-
-export default Projetos
+export default function Projetos() {
+  return (
+    <ProjectsSection id="projects" aria-labelledby="projects-title">
+      <SectionIntro>
+        <SectionLabel>03 / SELECTED WORK</SectionLabel>
+        <h2 id="projects-title">Testing practice &amp; engineering context</h2>
+        <p>QA work is presented with its scope and available evidence. Software projects provide context on how the systems under test are built.</p>
+      </SectionIntro>
+      <Lista>{projetos.map((projeto) => <li key={projeto.link + projeto.titulo}><Projeto {...projeto} /></li>)}</Lista>
+    </ProjectsSection>
+  )
+}

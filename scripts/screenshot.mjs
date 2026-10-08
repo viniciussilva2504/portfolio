@@ -35,17 +35,18 @@ async function takeScreenshots() {
 
   console.log(`Connecting to: ${BASE_URL}\n`)
 
-  const browser = await puppeteer.launch({ headless: true })
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] })
 
   try {
     const page = await browser.newPage()
 
     for (const viewport of VIEWPORTS) {
       await page.setViewport({ width: viewport.width, height: viewport.height })
-      await page.goto(BASE_URL, { waitUntil: 'networkidle0', timeout: 30000 })
+      await page.goto(BASE_URL, { waitUntil: 'domcontentloaded', timeout: 30000 })
+      await page.waitForSelector('main', { timeout: 10000 })
 
-      // Allow time for the canvas Starfield animation and fonts to render
-      await new Promise((resolve) => setTimeout(resolve, 2500))
+      // Allow the browser to finish painting the responsive layout.
+      await new Promise((resolve) => setTimeout(resolve, 300))
 
       const outputPath = path.join(OUT_DIR, `${viewport.name}.png`)
       await page.screenshot({ path: outputPath, fullPage: viewport.fullPage })

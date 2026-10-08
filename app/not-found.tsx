@@ -1,35 +1,11 @@
 export default function NotFound() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        gap: '12px',
-        fontFamily: 'sans-serif',
-        background: '#0a0c10',
-        color: '#e2e8f0',
-      }}
-    >
-      <span
-        style={{
-          fontFamily: 'monospace',
-          fontSize: '11px',
-          letterSpacing: '3px',
-          color: '#00e5ff',
-          textTransform: 'uppercase',
-        }}
-      >
-        404 // NOT FOUND
-      </span>
-      <a
-        href="/"
-        style={{ color: '#00e5ff', fontSize: '14px', textDecoration: 'none' }}
-      >
-        ← Back to portfolio
-      </a>
-    </div>
+    <main style={{ minHeight: '100svh', display: 'grid', placeItems: 'center', padding: '2rem', background: '#FAFAF7', color: '#111111', fontFamily: 'Inter, Arial, sans-serif' }}>
+      <section aria-labelledby="not-found-title" style={{ width: 'min(100%, 36rem)', borderTop: '1px solid #111111', paddingTop: '1.5rem' }}>
+        <p style={{ color: '#D64541', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em' }}>404 / PAGE NOT FOUND</p>
+        <h1 id="not-found-title" style={{ fontSize: 'clamp(2rem, 7vw, 3.5rem)', lineHeight: 1.1 }}>This page isn’t available.</h1>
+        <a href="/" style={{ fontWeight: 700, textUnderlineOffset: '0.25em' }}>Return to the portfolio →</a>
+      </section>
+    </main>
   )
 }

@@ -1,114 +1,76 @@
-import styled, { createGlobalStyle, keyframes } from 'styled-components'
-
-const scanline = keyframes`
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-`
+import styled, { createGlobalStyle } from 'styled-components'
 
 const EstiloGlobal = createGlobalStyle`
-  html {
-    scroll-behavior: smooth;
+  :root {
+    color-scheme: light;
+    --color-bg: #FAFAF7;
+    --color-text: #111111;
+    --color-muted: #4A4A4A;
+    --color-border: #111111;
+    --color-red: #D64541;
+    --color-blue: #356AE6;
+    --color-yellow: #E4B72C;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --container: 1200px;
+    --border: 1px solid var(--color-border);
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: ${(props) => props.theme.fontSans};
-    list-style: none;
-    box-sizing: border-box;
-  }
-
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
   body {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color: ${(props) => props.theme.corFundo};
-    color: ${(props) => props.theme.corPrincipal};
-    transition: background-color 0.3s ease, color 0.3s ease;
-    min-height: 100vh;
-    overflow-x: hidden;
-
-    @media (max-width: 768px) {
-      padding-top: 16px;
-    }
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: Inter, 'Aptos', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    min-width: 320px;
   }
-
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      ${(props) => props.theme.corAcento}40,
-      transparent
-    );
-    animation: ${scanline} 4s linear infinite;
-    pointer-events: none;
-    z-index: 100;
-    opacity: 0.3;
-  }
-
-  ::selection {
-    background: ${(props) => props.theme.corAcento}40;
-    color: ${(props) => props.theme.corPrincipal};
-  }
-
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.corFundo};
-  }
-  ::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme.corAcento}40;
-    border-radius: 3px;
+  body, button, a { -webkit-tap-highlight-color: transparent; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--color-blue); outline-offset: 4px; }
+  ::selection { background: #E4B72C66; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   }
 `
 
 export default EstiloGlobal
 
 export const Container = styled.div`
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 32px;
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  column-gap: 48px;
-  position: relative;
-  z-index: 1;
-
-  @media (max-width: 768px) {
-    max-width: 90%;
-    display: block;
-    padding: 0 16px;
-  }
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
 `
 
 export const SectionLabel = styled.span`
-  font-family: ${(props) => props.theme.fontMono};
-  font-size: 11px;
-  letter-spacing: 3px;
+  color: var(--color-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
   text-transform: uppercase;
-  color: ${(props) => props.theme.corAcento};
-  background: ${(props) => props.theme.corAcento}12;
-  border: 1px solid ${(props) => props.theme.corAcento}30;
-  padding: 4px 10px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 16px;
+
+  &::before {
+    content: '';
+    width: 0.65rem;
+    height: 0.65rem;
+    background: var(--color-red);
+    flex: 0 0 auto;
+  }
 `
 
 export const SectionDivider = styled.div`
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    ${(props) => props.theme.corDaBorda},
-    transparent
-  );
-  margin: 48px 0;
+  background: var(--color-border);
+  margin-block: clamp(2.5rem, 7vw, 5rem);
 `

@@ -1,80 +1,42 @@
 import styled from 'styled-components'
 
-export const GithubSecao = styled.div`
-  margin-top: 32px;
-  margin-bottom: 48px;
-  display: flex;
-  gap: 16px;
-  align-items: stretch;
-
-  img {
-    flex: 1;
-    min-width: 0;
-    height: auto;
-    object-fit: contain;
-    border-radius: 16px;
-    border: 3px solid ${(props) => props.theme.corDaBorda};
-    background: ${(props) => props.theme.corFundo};
-    box-shadow: 0 0 10px ${(props) => props.theme.corAcento}35,
-      0 0 25px ${(props) => props.theme.corAcento}15,
-      inset 0 0 10px ${(props) => props.theme.corAcento}08;
-    transition: box-shadow 0.3s ease;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+export const ProfileSection = styled.section`
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(17rem, 0.9fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  border-bottom: var(--border);
+  @media (max-width: 700px) { grid-template-columns: 1fr; gap: 1.75rem; }
 `
-
-export const SkillGrid = styled.div`
+export const ProfileCopy = styled.div`
+  h2 { max-width: 18ch; margin: 0.6rem 0 0.8rem; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: -0.035em; }
+  p { max-width: 45rem; color: var(--color-muted); margin: 0.7rem 0 0; }
+`
+export const FocusList = styled.ul`
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-  margin-bottom: 32px;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  li { border: var(--border); padding: 0.3rem 0.55rem; font-size: 0.75rem; font-weight: 600; }
+  li:nth-child(3n + 1) { border-left: 3px solid var(--color-red); }
+  li:nth-child(3n + 2) { border-left: 3px solid var(--color-blue); }
+  li:nth-child(3n) { border-left: 3px solid var(--color-yellow); }
 `
-
-export const SkillBadge = styled.span<{ $variant?: 'primary' | 'secondary' | 'accent' }>`
-  font-family: ${(props) => props.theme.fontMono};
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  padding: 5px 12px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-
-  ${(props) => {
-    switch (props.$variant) {
-      case 'accent':
-        return `
-          background: ${props.theme.corAcento2}18;
-          color: ${props.theme.corAcento2};
-          border: 1px solid ${props.theme.corAcento2}40;
-        `
-      case 'secondary':
-        return `
-          background: ${props.theme.corVerde}15;
-          color: ${props.theme.corVerde};
-          border: 1px solid ${props.theme.corVerde}35;
-        `
-      default:
-        return `
-          background: ${props.theme.corAcento}12;
-          color: ${props.theme.corAcento};
-          border: 1px solid ${props.theme.corAcento}30;
-        `
-    }
-  }}
-
-  &:hover {
-    transform: translateY(-1px);
-  }
+export const EvidenceGrid = styled.dl`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: var(--border);
+  border-left: var(--border);
+  margin: 0;
+  @media (max-width: 420px) { grid-template-columns: 1fr; }
 `
-
-export const SobreContainer = styled.div`
-  margin-bottom: 48px;
-`
-
-export const HighlightText = styled.span`
-  color: ${(props) => props.theme.corAcento};
-  font-weight: 600;
+export const EvidenceItem = styled.div`
+  min-width: 0;
+  padding: 0.7rem;
+  border-right: var(--border);
+  border-bottom: var(--border);
+  dt { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  dd { margin: 0.2rem 0 0; color: var(--color-muted); font-size: 0.8rem; overflow-wrap: anywhere; }
 `

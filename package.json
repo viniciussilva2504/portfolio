@@ -12,7 +12,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src/",
+    "lint": "node scripts/lint.mjs",
+    "qa:responsive": "node scripts/responsive-qa.mjs",
     "screenshot": "node scripts/screenshot.mjs"
   },
   "devDependencies": {

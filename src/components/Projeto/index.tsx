@@ -1,39 +1,32 @@
-import { Card, LinkBotao, GitHubBotao, BotoesContainer, FeaturedBadge, TagsContainer, Tag } from './styles'
-import Title from '../Title'
-import Paragrafo from '../Paragrafo'
+import { Card, CardHeading, CardType, CardDetails, Detail, TagsContainer, Tag, ProjectLinks } from './styles'
 
 export type ProjetoProps = {
   titulo: string
-  descricao: string
+  tipo: string
+  objetivo: string
+  abordagem: string
+  evidencia: string
   link: string
   tags?: string[]
   featured?: boolean
   githubLink?: string
 }
 
-const Projeto = ({ titulo, descricao, link, tags, featured, githubLink }: ProjetoProps) => (
-  <Card $featured={featured}>
-    {featured && <FeaturedBadge>⭐ FEATURED</FeaturedBadge>}
-    <Title>{titulo}</Title>
-    <Paragrafo tipo="secundario">{descricao}</Paragrafo>
-    {tags && (
-      <TagsContainer>
-        {tags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-      </TagsContainer>
-    )}
-    <BotoesContainer>
-      <LinkBotao href={link} target="_blank" rel="noopener noreferrer">
-        {featured ? 'Ver Demo ↗' : 'Visualizar'}
-      </LinkBotao>
-      {githubLink && (
-        <GitHubBotao href={githubLink} target="_blank" rel="noopener noreferrer">
-          GitHub ↗
-        </GitHubBotao>
-      )}
-    </BotoesContainer>
-  </Card>
-)
-
-export default Projeto
+export default function Projeto({ titulo, tipo, objetivo, abordagem, evidencia, link, tags, githubLink }: ProjetoProps) {
+  return (
+    <Card>
+      <CardType>{tipo}</CardType>
+      <CardHeading>{titulo}</CardHeading>
+      <CardDetails>
+        <Detail><dt>Objective</dt><dd>{objetivo}</dd></Detail>
+        <Detail><dt>Approach / context</dt><dd>{abordagem}</dd></Detail>
+        <Detail><dt>Evidence</dt><dd>{evidencia}</dd></Detail>
+      </CardDetails>
+      {tags && <TagsContainer aria-label="Tools and technologies">{tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}</TagsContainer>}
+      <ProjectLinks>
+        <a href={githubLink || link} target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        {githubLink && link !== githubLink && <a href={link} target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>}
+      </ProjectLinks>
+    </Card>
+  )
+}
