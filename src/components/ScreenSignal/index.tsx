@@ -39,14 +39,14 @@ const SignalLayer = styled.div`
 
   .blue-vertical {
     bottom: 0;
-    right: 0.65rem;
+    left: 50%;
     background: var(--color-blue);
     animation: blue-vertical-crossing 16s ease-in-out infinite;
   }
 
   .yellow {
     top: 50%;
-    left: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
     width: 3px;
     height: 3px;
@@ -57,11 +57,11 @@ const SignalLayer = styled.div`
   @keyframes red-crossing {
     0% { opacity: 0; transform: translate3d(-4px, 0, 0); }
     1% { opacity: 0.65; }
-    8% { transform: translate3d(22vw, 1px, 0); }
-    15% { transform: translate3d(48vw, -1px, 0); }
-    22% { transform: translate3d(74vw, 1px, 0); }
-    28.125% { opacity: 0.65; transform: translate3d(100vw, 0, 0); }
-    29.375%, 100% { opacity: 0; transform: translate3d(100vw, 0, 0); }
+    8% { transform: translate3d(16.5vw, 1px, 0); }
+    15% { transform: translate3d(36vw, -1px, 0); }
+    22% { transform: translate3d(55.5vw, 1px, 0); }
+    28.125% { opacity: 0.65; transform: translate3d(75vw, 0, 0); }
+    29.375%, 100% { opacity: 0; transform: translate3d(75vw, 0, 0); }
   }
 
   @keyframes blue-crossing {
@@ -85,13 +85,13 @@ const SignalLayer = styled.div`
   }
 
   @keyframes blue-vertical-crossing {
-    0%, 41.25% { opacity: 0; transform: translate3d(0, 4px, 0); }
+    0%, 41.25% { opacity: 0; transform: translate3d(-2px, 4px, 0); }
     42.25% { opacity: 0.65; }
-    49.25% { transform: translate3d(-1px, -22vh, 0); }
-    56.25% { transform: translate3d(1px, -48vh, 0); }
-    63.25% { transform: translate3d(-1px, -74vh, 0); }
-    69.375% { opacity: 0.65; transform: translate3d(0, -100vh, 0); }
-    70.625%, 100% { opacity: 0; transform: translate3d(0, -100vh, 0); }
+    49.25% { transform: translate3d(-3px, -22vh, 0); }
+    56.25% { transform: translate3d(-1px, -48vh, 0); }
+    63.25% { transform: translate3d(-3px, -74vh, 0); }
+    69.375% { opacity: 0.65; transform: translate3d(-2px, -100vh, 0); }
+    70.625%, 100% { opacity: 0; transform: translate3d(-2px, -100vh, 0); }
   }
 
   @keyframes yellow-flash {

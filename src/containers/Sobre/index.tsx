@@ -18,8 +18,8 @@ export default function Sobre() {
         </FocusList>
         <EvidenceGrid>
           <EvidenceItem><dt>Web testing</dt><dd>Cypress · React Testing Library</dd></EvidenceItem>
-          <EvidenceItem><dt>Language</dt><dd>Python · JavaScript · TypeScript</dd></EvidenceItem>
           <EvidenceItem><dt>API context</dt><dd>REST · Django</dd></EvidenceItem>
+          <EvidenceItem><dt>Language</dt><dd>Python · JavaScript · TypeScript</dd></EvidenceItem>
           <EvidenceItem><dt>Location</dt><dd>Porto · Portugal</dd></EvidenceItem>
         </EvidenceGrid>
       </div>

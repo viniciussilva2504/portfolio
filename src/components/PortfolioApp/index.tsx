@@ -42,8 +42,8 @@ export default function PortfolioApp() {
           <main>
             <Hero />
             <Sobre />
-            <AISkills />
             <Projetos />
+            <AISkills />
             <TechStack />
             <Contact id="contact" aria-labelledby="contact-title">
               <SectionLabel>05 / CONTACT</SectionLabel>
