@@ -20,6 +20,15 @@ export const CardType = styled.p`
   text-transform: uppercase;
   font-weight: 700;
 `
+export const ProjectPreview = styled.div`
+  width: 100%;
+  max-height: 18rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border: 1px solid #11111133;
+  background: var(--color-bg);
+  img { display: block; width: 100%; height: auto; max-height: 18rem; object-fit: contain; }
+`
 export const CardHeading = styled.h3`
   margin: 0;
   font-size: clamp(1.15rem, 2vw, 1.45rem);

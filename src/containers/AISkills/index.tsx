@@ -13,7 +13,7 @@ const process = [
 export default function AISkills() {
   return (
       <ProcessSection id="method" aria-labelledby="method-title">
-        <SectionLabel>02 / QUALITY PROCESS</SectionLabel>
+        <SectionLabel>03 / QUALITY PROCESS</SectionLabel>
         <h2 id="method-title">A repeatable testing workflow</h2>
         <p className="intro">A practical sequence for turning requirements into useful quality evidence.</p>
         <ProcessGrid>

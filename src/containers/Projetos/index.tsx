@@ -10,7 +10,7 @@ export default function Projetos() {
   return (
     <ProjectsSection id="projects" aria-labelledby="projects-title">
       <SectionIntro>
-        <SectionLabel>03 / SELECTED WORK</SectionLabel>
+        <SectionLabel>02 / SELECTED WORK</SectionLabel>
         <h2 id="projects-title">QA testing &amp; automation</h2>
         <p>Start with hands-on testing work. Each project shows its test approach, tools and repository evidence.</p>
       </SectionIntro>

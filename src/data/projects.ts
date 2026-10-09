@@ -2,6 +2,32 @@ import type { ProjetoProps } from '../components/Projeto'
 
 const projetos: ProjetoProps[] = [
   {
+    titulo: 'ZU Android UI Automation',
+    tipo: 'Mobile · Android UI automation',
+    objetivo: 'Automate smoke and onboarding checks for the ZU Android app.',
+    abordagem: 'Python, Appium and pytest cover app launch, foreground state and the onboarding flow.',
+    evidencia: 'Passing runs produce emulator video and screenshots; the README includes a generated demo GIF.',
+    previewImage: 'https://raw.githubusercontent.com/viniciussilva2504/ZU_Python_Automation/main/docs/assets/demo.gif',
+    previewAlt: 'Animated preview of the ZU Android app during an Appium test run.',
+    link: 'https://github.com/viniciussilva2504/ZU_Python_Automation',
+    githubLink: 'https://github.com/viniciussilva2504/ZU_Python_Automation',
+    tags: ['Python', 'Appium', 'pytest', 'Android'],
+    featured: true,
+  },
+  {
+    titulo: 'OpenClaw Account Deletion — QA Case Study',
+    tipo: 'Web · Functional testing / account lifecycle',
+    objetivo: 'Investigate a reported account-deletion flow that appears not to complete after email confirmation.',
+    abordagem: 'Python and Playwright tests use a local HTML contract harness. The report distinguishes observed UI behavior from unverified server-side outcomes; the optional live probe observes request intent only.',
+    evidencia: 'Redacted recording, screenshots, test strategy, test plan, bug report and investigation log.',
+    previewImage: 'https://raw.githubusercontent.com/viniciussilva2504/OpenClaw_Account_Deletion_QA_Project/main/evidence/account-deletion-preview.gif',
+    previewAlt: 'Redacted animated preview of the OpenClaw account deletion flow.',
+    link: 'https://github.com/viniciussilva2504/OpenClaw_Account_Deletion_QA_Project',
+    githubLink: 'https://github.com/viniciussilva2504/OpenClaw_Account_Deletion_QA_Project',
+    tags: ['Python', 'Playwright', 'Functional testing', 'Test analysis'],
+    featured: true,
+  },
+  {
     titulo: 'Cypress E2E Testing',
     tipo: 'Web · End-to-end automation',
     objetivo: 'Check web user flows with browser-level end-to-end tests.',
